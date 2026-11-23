@@ -56,7 +56,7 @@ API = "https://api.spotify.com/v1"
 # Development-mode Spotify apps have a low rate limit, and going over it can
 # block the app for a day. Lookups are cached, so a capped run just continues
 # where it left off next time.
-MAX_SEARCHES_PER_RUN = 300
+MAX_SEARCHES_PER_RUN = 150   # 266 in one go got a 4-hour block
 REQUEST_DELAY = 0.4      # seconds between Spotify calls
 MAX_RETRY_WAIT = 60      # give up (and save) instead of waiting longer
 RETRY_MISSES_AFTER = timedelta(days=45)
@@ -159,6 +159,15 @@ def list_releases() -> list[dict]:
     return releases
 
 
+def split_artist(raw: str) -> dict:
+    """'Artist - Title' -> {artist, title}; also 'Artist- Title' / 'Artist -Title'."""
+    for sep in (r"\s+-\s+", r"\s*-\s+|\s+-\s*", r"\s*[–—]\s*"):
+        parts = re.split(sep, raw.strip(), maxsplit=1)
+        if len(parts) == 2 and all(p.strip() for p in parts):
+            return {"artist": parts[0].strip(), "title": parts[1].strip()}
+    return {"artist": "", "title": raw.strip()}  # can't search without an artist
+
+
 def fetch_tracklist(url: str) -> dict:
     """{title, art_id, released, tracks: [{artist, title}]} of one album page."""
     page = bandcamp_get(url)
@@ -170,12 +179,9 @@ def fetch_tracklist(url: str) -> dict:
     for t in data.get("trackinfo", []):
         raw = (t.get("title") or "").strip()
         if t.get("artist"):
-            artist, title = t["artist"], raw
-        elif " - " in raw:
-            artist, title = raw.split(" - ", 1)
+            tracks.append({"artist": t["artist"].strip(), "title": raw})
         else:
-            artist, title = "", raw  # can't search without an artist
-        tracks.append({"artist": artist.strip(), "title": title.strip()})
+            tracks.append(split_artist(raw))
     return {
         "title": data["current"]["title"],
         "art_id": data.get("art_id"),
@@ -206,9 +212,10 @@ class Spotify:
         self.headers = {"Authorization": f"Bearer {resp.json()['access_token']}"}
         self.searches = 0
 
-    def call(self, method: str, path: str, **kwargs):
+    def call(self, method: str, path: str, headers: dict | None = None, **kwargs):
         for attempt in range(5):
-            resp = requests.request(method, API + path, headers=self.headers,
+            resp = requests.request(method, API + path,
+                                    headers={**self.headers, **(headers or {})},
                                     timeout=30, **kwargs)
             time.sleep(REQUEST_DELAY)
             if resp.status_code == 429:
@@ -270,7 +277,7 @@ class Spotify:
             if img.ok and len(base64.b64encode(img.content)) <= 256_000:
                 self.call("PUT", f"/playlists/{playlist_id}/images",
                           data=base64.b64encode(img.content),
-                          headers={**self.headers, "Content-Type": "image/jpeg"})
+                          headers={"Content-Type": "image/jpeg"})
                 return
 
 
@@ -286,6 +293,9 @@ def main() -> int:
     parser.add_argument("--match", default=DEFAULT_MATCH,
                         help=f"title regex of compilations to mirror (default {DEFAULT_MATCH!r})")
     parser.add_argument("--verbose", "-v", action="store_true", help="list missing songs")
+    parser.add_argument("--adopt", nargs=2, metavar=("TITLE_REGEX", "PLAYLIST_URL"),
+                        help="use an existing playlist for a compilation that has none "
+                             "(e.g. one left behind by a crashed run)")
     args = parser.parse_args()
 
     comps: dict = load_json(COMPS_FILE, {})
@@ -315,6 +325,14 @@ def main() -> int:
             comp = comps.setdefault(rel["url"], {})
             if not comp.get("tracks"):  # tracklists don't change; fetch once
                 comp.update(fetch_tracklist(rel["url"]))
+            comp["tracks"] = [split_artist(t["title"]) if not t["artist"] else t
+                              for t in comp["tracks"]]
+            if args.adopt and re.search(args.adopt[0], comp["title"], re.I) \
+                    and not comp.get("playlist"):
+                pid = re.search(r"playlist[/:]([A-Za-z0-9]+)", args.adopt[1]).group(1)
+                comp["playlist"] = {"id": pid, "url": f"https://open.spotify.com/playlist/{pid}",
+                                    "hash": None}
+                print(f"   (using existing playlist {pid} for {comp['title']})")
 
             uris, missing = [], []
             for t in comp["tracks"]:
@@ -347,11 +365,12 @@ def main() -> int:
             )[:300]
             digest = hashlib.sha1(("\n".join(uris) + name + description).encode()).hexdigest()
             existing = comp.get("playlist")
-            if existing and existing.get("hash") == digest:
+            if existing and existing.get("hash") == digest and existing.get("cover"):
                 continue
             if existing:
-                sp.call("PUT", f"/playlists/{existing['id']}",
-                        json={"name": name, "description": description})
+                if existing.get("hash") != digest:
+                    sp.call("PUT", f"/playlists/{existing['id']}",
+                            json={"name": name, "description": description})
                 playlist_id, url = existing["id"], existing["url"]
             else:
                 # Development-mode apps must use /me/playlists and .../items;
@@ -360,18 +379,24 @@ def main() -> int:
                                   json={"name": name, "description": description,
                                         "public": True})
                 playlist_id, url = created["id"], created["external_urls"]["spotify"]
+                # Remember it right away, so a crash later can't lead to a duplicate.
+                comp["playlist"] = {"id": playlist_id, "url": url, "hash": None}
+                save()
+            if not (existing or {}).get("cover"):
                 art = comp.get("art_id") or rel.get("art_id")
-                if art:
-                    try:
+                try:
+                    if art:
                         sp.upload_cover(playlist_id, art)
-                    except requests.HTTPError as e:
-                        print(f"   (cover upload failed: {e})")
-            # Replace the first 100, then append the rest 100 at a time.
-            sp.call("PUT", f"/playlists/{playlist_id}/items", json={"uris": uris[:100]})
-            for i in range(100, len(uris), 100):
-                sp.call("POST", f"/playlists/{playlist_id}/items",
-                        json={"uris": uris[i:i + 100]})
-            comp["playlist"] = {"id": playlist_id, "url": url, "hash": digest}
+                        comp["playlist"]["cover"] = True
+                except (requests.RequestException, RateLimited) as e:
+                    print(f"   (cover upload failed, will retry next run: {e})")
+            if comp["playlist"].get("hash") != digest:
+                # Replace the first 100, then append the rest 100 at a time.
+                sp.call("PUT", f"/playlists/{playlist_id}/items", json={"uris": uris[:100]})
+                for i in range(100, len(uris), 100):
+                    sp.call("POST", f"/playlists/{playlist_id}/items",
+                            json={"uris": uris[i:i + 100]})
+                comp["playlist"]["hash"] = digest
             print(f"   -> {'updated' if existing else 'created'} {url}")
             save()
 

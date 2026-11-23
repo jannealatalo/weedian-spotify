@@ -32,9 +32,18 @@ python weedian_playlists.py --all          # also "Trip to …", "420", "Hallowe
 python weedian_playlists.py --match "Trip to Finland"
 ```
 
-Each run does at most 300 Spotify searches to stay under the rate limit for
-development-mode apps. Lookups are cached in `data/tracks.json`, so a big
-backlog gets finished over a few runs.
+Each run does at most 150 Spotify searches to stay under the rate limit for
+development-mode apps (266 in one run got the app blocked for 4 hours).
+Lookups are cached in `data/tracks.json`, so a big backlog gets finished over
+a few runs.
+
+If a run dies after creating a playlist but before saving it, attach that
+playlist instead of making a duplicate (development-mode apps can't list
+playlists, so take the link from Spotify):
+
+```
+python weedian_playlists.py --adopt "October 2026" https://open.spotify.com/playlist/...
+```
 
 ## Automation
 
