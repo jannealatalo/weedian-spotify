@@ -1,0 +1,36 @@
+name: Weedian playlists
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC; new comps appear early each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weedian-playlists
+  cancel-in-progress: false
+
+jobs:
+  playlists:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Create / update playlists
+        env:
+          WEEDIAN_SPOTIFY_CLIENT_ID: ${{ secrets.WEEDIAN_SPOTIFY_CLIENT_ID }}
+          WEEDIAN_SPOTIFY_CLIENT_SECRET: ${{ secrets.WEEDIAN_SPOTIFY_CLIENT_SECRET }}
+          WEEDIAN_SPOTIFY_REFRESH_TOKEN: ${{ secrets.WEEDIAN_SPOTIFY_REFRESH_TOKEN }}
+        run: python weedian_playlists.py -v
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Update Weedian playlists"
+          git push
