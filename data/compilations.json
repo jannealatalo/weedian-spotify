@@ -165,7 +165,12 @@
     "title": "The Siren"
    }
   ],
-  "found": 37
+  "found": 37,
+  "playlist": {
+   "id": "1THIA2yM5h7oGlmz86LTgs",
+   "url": "https://open.spotify.com/playlist/1THIA2yM5h7oGlmz86LTgs",
+   "hash": null
+  }
  },
  "https://weedian420.bandcamp.com/album/the-best-releases-of-september-2026": {
   "title": "The Best Releases of September 2026",
