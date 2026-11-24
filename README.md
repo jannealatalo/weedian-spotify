@@ -6,6 +6,18 @@ and yearly *The 100 Best Releases of …* comps, with one public playlist per
 compilation. Each playlist keeps the compilation's track order and cover art.
 Songs that aren't on Spotify are skipped and searched for again after 45 days.
 
+**All the playlists: <https://www.darksuomi.fi/weedian-in-spotify>**
+
+## The webpage
+
+The page above is part of [darksuomi.fi](https://www.darksuomi.fi) (repo
+`jannealatalo/darksuomi`, `frontend/app/weedian-in-spotify/` and
+`frontend/lib/weedian.ts`). It reads `data/compilations.json` and
+`data/tracks.json` straight from this repo's `main` branch on GitHub, and
+caches them for a few hours. New playlists appear there without a darksuomi
+deploy, but **changing the format of those files breaks the page**, so update
+`lib/weedian.ts` at the same time.
+
 ## Setup (once)
 
 1. **Spotify app.** On <https://developer.spotify.com/dashboard>, create an app
