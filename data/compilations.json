@@ -169,7 +169,8 @@
   "playlist": {
    "id": "1THIA2yM5h7oGlmz86LTgs",
    "url": "https://open.spotify.com/playlist/1THIA2yM5h7oGlmz86LTgs",
-   "hash": null
+   "hash": "5844a9cac5f0dc627ba4e94a499a7b28910d4898",
+   "cover": true
   }
  },
  "https://weedian420.bandcamp.com/album/the-best-releases-of-september-2026": {
@@ -418,8 +419,8 @@
     "title": "Goodside"
    },
    {
-    "artist": "",
-    "title": "Shadow of Jupiter- Bones"
+    "artist": "Shadow of Jupiter",
+    "title": "Bones"
    },
    {
     "artist": "Luna and the Aether",
@@ -498,11 +499,11 @@
     "title": "Cythraul"
    }
   ],
-  "found": 21,
+  "found": 22,
   "playlist": {
    "id": "2SO3OmPNO5AhMR1peIZSFV",
    "url": "https://open.spotify.com/playlist/2SO3OmPNO5AhMR1peIZSFV",
-   "hash": "90affc63df2079bcf945d307a5b0f91280565b6f",
+   "hash": "baea53526d13f938172f6d846079e979ab58ad20",
    "cover": true
   }
  },
@@ -1376,6 +1377,834 @@
    {
     "artist": "Smoke Rites",
     "title": "10ft Dread"
+   }
+  ],
+  "found": 29,
+  "playlist": {
+   "id": "6I1ntGPwHcNKye59H0qFeK",
+   "url": "https://open.spotify.com/playlist/6I1ntGPwHcNKye59H0qFeK",
+   "hash": "e2f28ec840ef065b59ad5d9288f617c9c9e0b03c",
+   "cover": true
+  }
+ },
+ "https://weedian420.bandcamp.com/album/the-100-best-releases-of-2025": {
+  "title": "The 100 Best Releases of 2025",
+  "art_id": 3376848516,
+  "released": "04 Dec 2025 00:00:00 GMT",
+  "tracks": [
+   {
+    "artist": "Wolftooth",
+    "title": "Wizard's Light"
+   },
+   {
+    "artist": "Black Sabbitch",
+    "title": "Children of the Grave"
+   },
+   {
+    "artist": "Mountain Of Misery",
+    "title": "Follow The Sun"
+   },
+   {
+    "artist": "Bone Church",
+    "title": "Bone Boys Ride Out"
+   },
+   {
+    "artist": "Lo-Pan",
+    "title": "Rogue Wave"
+   },
+   {
+    "artist": "Borracho",
+    "title": "Succubus"
+   },
+   {
+    "artist": "Kaiser",
+    "title": "Brotha"
+   },
+   {
+    "artist": "Margarita Witch Cult",
+    "title": "Witches Candle"
+   },
+   {
+    "artist": "Winds of Neptune",
+    "title": "The Faun's Rhyme"
+   },
+   {
+    "artist": "Steinsopp",
+    "title": "Sunslung"
+   },
+   {
+    "artist": "Brimstone Coven",
+    "title": "Fly On"
+   },
+   {
+    "artist": "Turtle Skull",
+    "title": "Into The Sun"
+   },
+   {
+    "artist": "Hey Satan",
+    "title": "The Monster"
+   },
+   {
+    "artist": "Red Eye",
+    "title": "Stardust"
+   },
+   {
+    "artist": "Lightning Swells Forever",
+    "title": "Daze"
+   },
+   {
+    "artist": "Witchrot",
+    "title": "Tombstoned"
+   },
+   {
+    "artist": "Hog",
+    "title": "Blackhole"
+   },
+   {
+    "artist": "Witchsnake",
+    "title": "Dethroned"
+   },
+   {
+    "artist": "Demonic Death Judge",
+    "title": "90's Violence"
+   },
+   {
+    "artist": "Hibernaut",
+    "title": "Revenants"
+   },
+   {
+    "artist": "Godzillionaire",
+    "title": "3rd Street Shuffle"
+   },
+   {
+    "artist": "Organic Destruction",
+    "title": "Droned & Confuzzed"
+   },
+   {
+    "artist": "Hexjakt",
+    "title": "Valley of the Dead"
+   },
+   {
+    "artist": "Electric Citizen",
+    "title": "Static Vision"
+   },
+   {
+    "artist": "Bask",
+    "title": "Unwound"
+   },
+   {
+    "artist": "Håndgemeng",
+    "title": "The Sundrinker"
+   },
+   {
+    "artist": "Hebi Katana",
+    "title": "Yume wa Kareno"
+   },
+   {
+    "artist": "The Big Rip",
+    "title": "Behold, This Mountain"
+   },
+   {
+    "artist": "Warlung",
+    "title": "White Light Seeker"
+   },
+   {
+    "artist": "Maha Sohona",
+    "title": "Visions"
+   },
+   {
+    "artist": "Stoned Jesus",
+    "title": "New Dawn"
+   },
+   {
+    "artist": "Seedy Jeezus",
+    "title": "Is There All That Is"
+   },
+   {
+    "artist": "Cosmic Reaper",
+    "title": "Bones"
+   },
+   {
+    "artist": "Gentle Beast",
+    "title": "Voodoo Hoodoo Space Machine"
+   },
+   {
+    "artist": "Buzzard",
+    "title": "Changeling"
+   },
+   {
+    "artist": "AAWKS",
+    "title": "Celestial Magick"
+   },
+   {
+    "artist": "Black Moon Cult",
+    "title": "Ophidian Future"
+   },
+   {
+    "artist": "The Re-Stoned",
+    "title": "Sleeping on the Emerald Throne"
+   },
+   {
+    "artist": "Kal-El",
+    "title": "Void Cleaner"
+   },
+   {
+    "artist": "Good Spirits",
+    "title": "Smoke and Mirrors"
+   },
+   {
+    "artist": "Miss Lava",
+    "title": "Woe Warrior"
+   },
+   {
+    "artist": "Supernaughty",
+    "title": "Amsterdamned"
+   },
+   {
+    "artist": "Fuzzriders",
+    "title": "I Like It"
+   },
+   {
+    "artist": "Death Wheelers",
+    "title": "The Ecstasy Of Möld"
+   },
+   {
+    "artist": "Abanamat",
+    "title": "Abominat"
+   },
+   {
+    "artist": "Piece",
+    "title": "Spheres"
+   },
+   {
+    "artist": "Greenhead",
+    "title": "Indigo"
+   },
+   {
+    "artist": "MOOCH",
+    "title": "Prominence"
+   },
+   {
+    "artist": "Crystal Spiders",
+    "title": "Ignite"
+   },
+   {
+    "artist": "Rainbows Are Free",
+    "title": "Runnin' With A Friend of the Devil"
+   },
+   {
+    "artist": "Sonic Demon",
+    "title": "Planet Terror"
+   },
+   {
+    "artist": "INSOMNIAC",
+    "title": "Snow and Ice"
+   },
+   {
+    "artist": "Wizzo",
+    "title": "Place of the Chosen Lords"
+   },
+   {
+    "artist": "Honeybadger",
+    "title": "Filth And Disorder"
+   },
+   {
+    "artist": "Dusty Rose Gang",
+    "title": "Person Of Light"
+   },
+   {
+    "artist": "Acid Magus",
+    "title": "War"
+   },
+   {
+    "artist": "Weed Demon",
+    "title": "Tower Of Smoke"
+   },
+   {
+    "artist": "Grave Speaker",
+    "title": "Bones and Steel"
+   },
+   {
+    "artist": "REMINA",
+    "title": "House of Suns"
+   },
+   {
+    "artist": "Apex Ten",
+    "title": "Brainwasher"
+   },
+   {
+    "artist": "Stone Machine Electric",
+    "title": "Manic"
+   },
+   {
+    "artist": "Dhyana",
+    "title": "Zenjyo"
+   },
+   {
+    "artist": "Low Fiction",
+    "title": "Choose Doubt"
+   },
+   {
+    "artist": "Elepharmers",
+    "title": "The Call of the Wild"
+   },
+   {
+    "artist": "Birdwitch",
+    "title": "Starling"
+   },
+   {
+    "artist": "Psythøn",
+    "title": "Quetzal Hostilis"
+   },
+   {
+    "artist": "Maliciouz",
+    "title": "Cataglyphis"
+   },
+   {
+    "artist": "Tumbleweed Dealer",
+    "title": "Dark Green"
+   },
+   {
+    "artist": "Black Sasquatch",
+    "title": "Temple"
+   },
+   {
+    "artist": "Yoo Doo Right",
+    "title": "Ponders End"
+   },
+   {
+    "artist": "Amammoth",
+    "title": "satellite"
+   },
+   {
+    "artist": "I Am Low",
+    "title": "Sweet M16"
+   },
+   {
+    "artist": "Caboose",
+    "title": "Shiner"
+   },
+   {
+    "artist": "Dead Shrine",
+    "title": "Cydonia Mensa"
+   },
+   {
+    "artist": "Sleep Throne",
+    "title": "Come Take A Sip From The Bog"
+   },
+   {
+    "artist": "Sunbreather",
+    "title": "Sunbreather"
+   },
+   {
+    "artist": "Giöbia",
+    "title": "1976"
+   },
+   {
+    "artist": "Hexecutioner",
+    "title": "Skookum"
+   },
+   {
+    "artist": "Wax Wizard",
+    "title": "Gateway"
+   },
+   {
+    "artist": "Carbon Decoy",
+    "title": "Icarus"
+   },
+   {
+    "artist": "Boozifer",
+    "title": "Front Towards Enemy"
+   },
+   {
+    "artist": "Dhuma",
+    "title": "Roadless"
+   },
+   {
+    "artist": "Marsquakers",
+    "title": "The Storm"
+   },
+   {
+    "artist": "Necronomicunt",
+    "title": "Face Transplanter"
+   },
+   {
+    "artist": "Ivy Gardens",
+    "title": "Frozen Limbs"
+   },
+   {
+    "artist": "Kungens Män",
+    "title": "Resande i rockmusik"
+   },
+   {
+    "artist": "The Screech Boys",
+    "title": "The Passenger"
+   },
+   {
+    "artist": "This Love Is Drone",
+    "title": "Flesh-Ripper"
+   },
+   {
+    "artist": "Doomherre",
+    "title": "Dead Ship Bay"
+   },
+   {
+    "artist": "SunBearer",
+    "title": "Gnosis"
+   },
+   {
+    "artist": "Dead Wolf",
+    "title": "Apocalypse Blues"
+   },
+   {
+    "artist": "Sluglord",
+    "title": "Void Gazer"
+   },
+   {
+    "artist": "Entrøpia",
+    "title": "Toxic Gospel"
+   },
+   {
+    "artist": "Toilet Snake",
+    "title": "Back from the Sewers"
+   },
+   {
+    "artist": "Doghag",
+    "title": "Pale"
+   },
+   {
+    "artist": "Dwellers",
+    "title": "Headlines"
+   },
+   {
+    "artist": "Stonebirds",
+    "title": "Sea of Sorrow"
+   },
+   {
+    "artist": "Land Mammal",
+    "title": "Animal"
+   },
+   {
+    "artist": "Sunburster",
+    "title": "Jinn"
+   },
+   {
+    "artist": "Spiritual War",
+    "title": "Last Night, Bastard!"
+   }
+  ],
+  "found": 98,
+  "playlist": {
+   "id": "5UmQarLoqis3zpgayN14NY",
+   "url": "https://open.spotify.com/playlist/5UmQarLoqis3zpgayN14NY",
+   "hash": "01bf1c7bd826634a8f36109dbd8427cd7f18188d",
+   "cover": true
+  }
+ },
+ "https://weedian420.bandcamp.com/album/the-100-best-releases-of-2024": {
+  "title": "The 100 Best Releases of 2024",
+  "art_id": 2698984277,
+  "released": "05 Dec 2024 00:00:00 GMT",
+  "tracks": [
+   {
+    "artist": "Gnome",
+    "title": "The Gods Are Evil"
+   },
+   {
+    "artist": "Sons of Arrakis",
+    "title": "Scattering"
+   },
+   {
+    "artist": "Psychlona",
+    "title": "Jasmine"
+   },
+   {
+    "artist": "Slomosa",
+    "title": "Red Thundra"
+   },
+   {
+    "artist": "Stonekind",
+    "title": "Masters of man"
+   },
+   {
+    "artist": "Blue Heron",
+    "title": "Dinosaur"
+   },
+   {
+    "artist": "HazeHound",
+    "title": "Macrodose"
+   },
+   {
+    "artist": "Bahboon",
+    "title": "Cosmic Drive"
+   },
+   {
+    "artist": "Robot God",
+    "title": "Nazare"
+   },
+   {
+    "artist": "1000Mods",
+    "title": "Astral Odor"
+   },
+   {
+    "artist": "High Desert Queen",
+    "title": "Ancient Aliens"
+   },
+   {
+    "artist": "Acid Mammoth",
+    "title": "Supersonic Megafauna Collision"
+   },
+   {
+    "artist": "High Reeper",
+    "title": "Renewed By Death"
+   },
+   {
+    "artist": "Schubmodul",
+    "title": "Emerald Maze"
+   },
+   {
+    "artist": "Castle Rat",
+    "title": "Dagger Dragger"
+   },
+   {
+    "artist": "Rifflord",
+    "title": "Tumbleweed"
+   },
+   {
+    "artist": "Green Yeti",
+    "title": "One More Bite"
+   },
+   {
+    "artist": "Slower",
+    "title": "War Ensemble"
+   },
+   {
+    "artist": "Scorched Oak",
+    "title": "Mirrors"
+   },
+   {
+    "artist": "Mammoth Volume",
+    "title": "Cult of Eneera"
+   },
+   {
+    "artist": "Hermano",
+    "title": "Breathe"
+   },
+   {
+    "artist": "Sundrifter",
+    "title": "Limitless"
+   },
+   {
+    "artist": "Sergeant Thunderhoof",
+    "title": "Salvation for the Soul"
+   },
+   {
+    "artist": "Aye Mammoth",
+    "title": "Return to Stardust"
+   },
+   {
+    "artist": "Momovudu",
+    "title": "Raising the Falcon"
+   },
+   {
+    "artist": "Spectral Sorcery",
+    "title": "The Tomb of the Demilich"
+   },
+   {
+    "artist": "Witchorious",
+    "title": "Monster"
+   },
+   {
+    "artist": "Hashtronaut",
+    "title": "Rip Wizard"
+   },
+   {
+    "artist": "The Obsessed",
+    "title": "Stoned Back to the Bomb Age"
+   },
+   {
+    "artist": "WyndRider",
+    "title": "Motorcycle Witches"
+   },
+   {
+    "artist": "Ten Ton Slug",
+    "title": "Mallacht an tSloda"
+   },
+   {
+    "artist": "Horseburner",
+    "title": "Hidden Bridges"
+   },
+   {
+    "artist": "Black Pyramid",
+    "title": "Take Us To The Threshold"
+   },
+   {
+    "artist": "Qilin",
+    "title": "Tayir Alfiniq"
+   },
+   {
+    "artist": "Lowrider",
+    "title": "And The Horse You Rode In On"
+   },
+   {
+    "artist": "Daytripper",
+    "title": "Jarls Eyes"
+   },
+   {
+    "artist": "Delving",
+    "title": "Omnipresence"
+   },
+   {
+    "artist": "Greenleaf",
+    "title": "Different Horses"
+   },
+   {
+    "artist": "Worshipper",
+    "title": "Acid Burns"
+   },
+   {
+    "artist": "Alunah",
+    "title": "Never Too Late"
+   },
+   {
+    "artist": "Carpet",
+    "title": "Ghosts"
+   },
+   {
+    "artist": "Leather Lung",
+    "title": "Empty Bottle Boogie"
+   },
+   {
+    "artist": "Gravity Well",
+    "title": "Delirium"
+   },
+   {
+    "artist": "Lucifer Giant",
+    "title": "Monuments"
+   },
+   {
+    "artist": "Atomic Vulture",
+    "title": "Alpha Wave"
+   },
+   {
+    "artist": "Huntsmen",
+    "title": "The Herbsight"
+   },
+   {
+    "artist": "Elk Witch",
+    "title": "Empyrean"
+   },
+   {
+    "artist": "King of None",
+    "title": "Low'n'Slow"
+   },
+   {
+    "artist": "Monkey3",
+    "title": "Kali Yuga"
+   },
+   {
+    "artist": "Mr.Bison",
+    "title": "The Veil"
+   },
+   {
+    "artist": "Deadpeach",
+    "title": "Set the control to Mother Earth"
+   },
+   {
+    "artist": "Rollerball",
+    "title": "Dragon"
+   },
+   {
+    "artist": "Lord Buffalo",
+    "title": "Holus Bolus"
+   },
+   {
+    "artist": "The Cosmic Dead",
+    "title": "Space Mountain Part III: Last RIde Out"
+   },
+   {
+    "artist": "Abrams",
+    "title": "Lungfish"
+   },
+   {
+    "artist": "Iron Blanket",
+    "title": "Mystic Goddess"
+   },
+   {
+    "artist": "Iota",
+    "title": "The Great Dissolver"
+   },
+   {
+    "artist": "STÖNER",
+    "title": "Party March"
+   },
+   {
+    "artist": "Free Ride",
+    "title": "Outsider"
+   },
+   {
+    "artist": "Skull Servant",
+    "title": "Sepulcher of Barbarians"
+   },
+   {
+    "artist": "CLEEN",
+    "title": "A Means To An End"
+   },
+   {
+    "artist": "Occult Witches",
+    "title": "Flesh and Bones"
+   },
+   {
+    "artist": "Haunted",
+    "title": "Waratah Blossom"
+   },
+   {
+    "artist": "Spirit Mother",
+    "title": "Emerald"
+   },
+   {
+    "artist": "Black Elephant",
+    "title": "The Fall of the Gods"
+   },
+   {
+    "artist": "Cripta Blue",
+    "title": "Hermit"
+   },
+   {
+    "artist": "Big Scenic Nowhere",
+    "title": "The Waydown"
+   },
+   {
+    "artist": "Heavy Temple",
+    "title": "Extreme Indifference to Life"
+   },
+   {
+    "artist": "Witchpit",
+    "title": "Forever Spoken"
+   },
+   {
+    "artist": "Craneium",
+    "title": "One Thousand Sighs"
+   },
+   {
+    "artist": "Magick Potion",
+    "title": "Never Change"
+   },
+   {
+    "artist": "SHUN",
+    "title": "Aviator"
+   },
+   {
+    "artist": "Lie Heavy",
+    "title": "Burn To The Moon"
+   },
+   {
+    "artist": "Qaalm",
+    "title": "Hangman's Lament"
+   },
+   {
+    "artist": "Coma Hole",
+    "title": "King Bee"
+   },
+   {
+    "artist": "Duel",
+    "title": "Satan's Invention"
+   },
+   {
+    "artist": "Curse the Son",
+    "title": "R.I.P."
+   },
+   {
+    "artist": "Mount Hush",
+    "title": "The Hunt"
+   },
+   {
+    "artist": "The Electric Mud",
+    "title": "Top of the Tree"
+   },
+   {
+    "artist": "Heinous Crimes",
+    "title": "Albanian Winter"
+   },
+   {
+    "artist": "Gozd",
+    "title": "Somewhere in Between"
+   },
+   {
+    "artist": "Hell Is A City",
+    "title": "Narrow Seas/Brewedinterlude"
+   },
+   {
+    "artist": "Earth Ship",
+    "title": "Ghost Town"
+   },
+   {
+    "artist": "LungBurner",
+    "title": "Requiem"
+   },
+   {
+    "artist": "Elephant Tree",
+    "title": "Sunday"
+   },
+   {
+    "artist": "Moon Goons",
+    "title": "Telesmatic Figures"
+   },
+   {
+    "artist": "Vessel",
+    "title": "Rapid Eye Movement"
+   },
+   {
+    "artist": "Outback",
+    "title": "Malachi IV/Dying Sun"
+   },
+   {
+    "artist": "Brume",
+    "title": "How Rude"
+   },
+   {
+    "artist": "Certain Death",
+    "title": "Paranoid"
+   },
+   {
+    "artist": "Vast Pyre",
+    "title": "The Argent Tomb"
+   },
+   {
+    "artist": "Astrofuzz",
+    "title": "Azimuth"
+   },
+   {
+    "artist": "Sea of Snakes",
+    "title": "Below the Water"
+   },
+   {
+    "artist": "Psychotic Reaction",
+    "title": "Thought Killer / Lotus​-​Eater"
+   },
+   {
+    "artist": "Purple Lung",
+    "title": "Play Rogue"
+   },
+   {
+    "artist": "The Gray Goo",
+    "title": "Chilldozer"
+   },
+   {
+    "artist": "The Fërtility Cült",
+    "title": "Fame Everlasting"
+   },
+   {
+    "artist": "Bongfoot",
+    "title": "Environmental  Gaslighting"
+   },
+   {
+    "artist": "King Botfly",
+    "title": "Hold On"
+   },
+   {
+    "artist": "Scarn-On",
+    "title": "Scarn-On - Scarn-On - Easy Rider"
    }
   ]
  }
